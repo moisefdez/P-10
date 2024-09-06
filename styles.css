@@ -19,9 +19,13 @@
 
 #wrap {
     width: 95%;
-    height: 600px;
+    height: 700px;
     background-color: #141724;
     box-shadow: 20px 20px 30px #4e3b24;
+    background-image: url("./img/One-Piece-Live-action_1.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
 
     display: flex;
     align-items: center;
