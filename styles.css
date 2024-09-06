@@ -19,7 +19,8 @@
 
 #wrap {
     width: 95%;
-    height: 700px;
+    height: auto;
+    min-height: 500px;
     background-color: #141724;
     box-shadow: 20px 20px 30px #4e3b24;
     background-image: url("./img/One-Piece-Live-action_1.jpg");
@@ -27,9 +28,64 @@
     background-size:cover;
     background-repeat: no-repeat;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-    position: relative;
+
 }
+
+/* header */
+
+header{
+    display: grid;
+    grid-template-columns:30% 1fr 30%;
+    /* text-align: center; */
+    align-items: center;
+}
+
+header #logo{
+    text-align: end;
+    margin-right: 100px;
+}
+
+header img{
+    width: 150px;
+}
+
+header ul{
+    display: flex;
+
+}
+
+header ul li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+header ul li a{
+   text-decoration: none;
+   color: rgba(255, 255, 255, 0.849);
+   
+}
+
+#buscador {
+    width: 245px;
+    display: flex;
+    background-color: transparent;
+    border: 1px solid  rgba(255, 255, 255, 0.849);
+   
+}
+
+#buscador span{
+    padding-left: 3px;
+    cursor: pointer;
+    color:  rgba(255, 255, 255, 0.849);
+    font-size: 22px;
+}
+
+input[type= "search"]{
+    width: 100%;
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    color:  rgba(255, 255, 255, 0.849);
+  
+}
+
