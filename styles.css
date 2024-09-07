@@ -5,6 +5,20 @@
     list-style: none;
 }
 
+/* fonts */
+
+@font-face {
+    font-family: 'pirata';
+    src: url('./fonts/PirateJack-lglRX.otf') format('openType');
+}
+
+@font-face {
+    font-family: 'one-piece';
+    src: url('./fonts/OnePiece-zAqL.ttf') format('truetype');
+}
+
+/* container */
+
 #container {
     width: 100%;
     height: 100vh;
@@ -19,8 +33,8 @@
 
 #wrap {
     width: 95%;
-    height: auto;
-    min-height: 500px;
+    min-height: 600px;
+    height: 65vh;
     background-color: #141724;
     box-shadow: 20px 20px 30px #4e3b24;
     background-image: url("./img/One-Piece-Live-action_1.jpg");
@@ -52,6 +66,7 @@ header img{
 
 header ul{
     display: flex;
+    align-items: center;
 
 }
 
@@ -62,13 +77,16 @@ header ul li{
 header ul li a{
    text-decoration: none;
    color: rgba(255, 255, 255, 0.849);
-   
+   font-size: 25px;
+   font-family: sans-serif;
 }
 
 #buscador {
-    width: 245px;
+    width: auto;
+    max-width: 288px;
     display: flex;
-    background-color: transparent;
+    align-items: center;
+    /* background-color: transparent; */
     border: 1px solid  rgba(255, 255, 255, 0.849);
    
 }
@@ -77,15 +95,80 @@ header ul li a{
     padding-left: 3px;
     cursor: pointer;
     color:  rgba(255, 255, 255, 0.849);
-    font-size: 22px;
+    font-size: 30px;
 }
 
 input[type= "search"]{
     width: 100%;
+    height: 40px;
     background-color: transparent;
     border: transparent;
     outline: none;
-    color:  rgba(255, 255, 255, 0.849);
+    color: white  ;
   
 }
 
+/* contenido */
+
+#content{
+    width: 80%;
+    min-height: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#serie{
+    display: flex;
+    align-items: center;
+}
+
+#serie img{
+    width: 40px;
+}
+
+#serie p{
+    letter-spacing: 10px;
+    font-family: sans-serif;
+    color: #ccc;
+    font-weight: 600;
+}
+
+#name{
+    font-family: 'one-piece' , sans-serif;
+    font-size: 120px;
+    color:white;
+    padding-top: -10px;
+    text-align: start;
+    margin-top: -15px;
+}
+
+#info ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: -15px;
+}
+
+#info ul li{
+    border-right: 1px solid #ccc;
+}
+#info ul li:last-child{
+    border-right: none;
+}
+#info ul li:nth-child(2) a{
+    background-color: red;
+    color: white;
+    font-weight: 600;
+}
+
+#info ul li a{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #ccc ;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
