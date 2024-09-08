@@ -33,8 +33,8 @@
 
 #wrap {
     width: 95%;
-    min-height: 600px;
     height: 65vh;
+    min-height: 500px;
     background-color: #141724;
     box-shadow: 20px 20px 30px #4e3b24;
     background-image: url("./img/One-Piece-Live-action_1.jpg");
@@ -43,21 +43,22 @@
     background-repeat: no-repeat;
 
     overflow: hidden;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* header */
 
 header{
     display: grid;
-    grid-template-columns:30% 1fr 30%;
+    grid-template-columns:25% 1fr 35%;
     /* text-align: center; */
     align-items: center;
 }
 
 header #logo{
-    text-align: end;
-    margin-right: 100px;
+    text-align: start;
+    padding-left: 100px;
 }
 
 header img{
@@ -70,22 +71,40 @@ header ul{
 
 }
 
+#nav{
+    display: flex;
+    justify-content: center;
+}
+
 header ul li{
     margin-left: 10px;
     margin-right: 10px;
 }
+
 header ul li a{
    text-decoration: none;
    color: rgba(255, 255, 255, 0.849);
    font-size: 20px;
    font-family: sans-serif;
+   transition: all 400ms;
+}
+
+header ul li a:hover{
+    color: rgba(255, 255, 255, 0.575); 
+}
+
+
+#cont-buscador{
+    display: flex;
+    justify-content: center;
 }
 
 #buscador {
-    width: auto;
-    max-width: 288px;
+    width: 75%;
+    height: 35px;
     display: flex;
     align-items: center;
+    justify-content: center;
     /* background-color: transparent; */
     border: 1px solid  rgba(255, 255, 255, 0.849);
    
@@ -95,17 +114,21 @@ header ul li a{
     padding-left: 3px;
     cursor: pointer;
     color:  rgba(255, 255, 255, 0.849);
-    font-size: 30px;
+    font-size: 25px;
 }
 
 input[type= "search"]{
     width: 100%;
-    height: 40px;
+    height: 100%;
     background-color: transparent;
     border: transparent;
     outline: none;
-    color: white  ;
-  
+    color: white;
+}
+
+input::placeholder{
+    color: white;
+    padding-left: 3px;
 }
 
 /* contenido */
@@ -118,7 +141,6 @@ input[type= "search"]{
     flex-direction: column;
     justify-content: center;
     padding-left: 100px;
-    padding-right: 100px;
     margin-top: 40px;
 }
 
@@ -144,17 +166,18 @@ input[type= "search"]{
     color:white;
     padding-top: -10px;
     text-align: start;
-    margin-top: -15px;
+    margin-top: -10px;
 }
 
 #info ul{
     display: flex;
     flex-direction: row;
-    margin-top: -15px;
+/*     margin-top: -15px; */
 }
 
 #info ul li{
     border-right: 1px solid #ccc;
+    transition: all 500ms;
 }
 #info ul li:last-child{
     border-right: none;
@@ -168,10 +191,13 @@ input[type= "search"]{
 #info ul li a{
     margin-left: 10px;
     margin-right: 10px;
-    color: #ccc ;
+    color: whitesmoke ;
     font-family: sans-serif;
     text-align: center;
     text-decoration: none;
+}
+#info ul li:hover{
+    background-color: red; 
 }
 
 #description{
@@ -199,6 +225,15 @@ input[type = "button"]{
     border: none;
     cursor: pointer;
 }
+input[type = "button"]:nth-child(2){
+    margin-left: 5px;
+    transition: all 300ms;
+}
+
+input[type = "button"]:hover:nth-child(2){
+    background-color: #ec0000;   
+}
+
 
 input[type = "button"]:active{
     border: 1px solid black;
@@ -208,11 +243,13 @@ input[type = "button"]:first-child{
    background-color: #ec0000;
 }
 
+
+
 #trailer{
     width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 #trailer button{
@@ -239,4 +276,187 @@ input[type = "button"]:first-child{
     margin-left: 10px;
     color: white;
     font-family: sans-serif;
+}
+
+/* RESPONSIBE */
+
+@media (max-width: 1147px) { 
+    header ul li a {
+        font-size: 17px ;
+    }
+}
+
+@media (max-width: 1165px) { 
+    #trailer{
+        margin-top: 15px;
+    }
+}
+
+
+@media (max-width: 1067px) {  
+    header {
+        display: grid;
+        grid-template-columns: 27% 1fr 30%;
+        /* text-align: center; */
+        align-items: center;
+    }
+    header ul li a {
+        font-size: 17px ;
+    }
+    #trailer{
+        margin-top: 10px;
+    }
+  
+}
+
+@media (max-width: 962px) {  
+   
+   #buscardor{
+    width: 80%;
+    justify-content: end;
+   } 
+   #content{
+    margin-top: 25px;
+   }
+   #description{
+    width: 66%;
+   }
+   #trailer {
+    margin-top: 23px;
+}
+}
+@media (max-width: 957px) {  
+   /*  header #logo {
+        text-align: start;
+        padding-left: 50px;
+    } */
+   #buscardor{
+    width: 80%;
+    justify-content: end;
+   } 
+}
+
+@media (max-width: 947px) {
+    #wrap{
+        overflow:scroll;
+    }  
+    header {
+        display: grid;
+        grid-template-columns: 1fr ;
+        /* text-align: center; */
+        align-items: center;
+       
+    } 
+    header #logo {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    header ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #cont-buscador{
+        padding-top: 10px;
+    }
+}
+@media (max-width: 900px) {
+    #description {
+        width: 75%;
+    }
+}
+@media (max-width:731px) {
+    #content{
+        padding-left: 80px;
+    }
+    
+}
+@media (max-width:669px) {
+    #content{
+        padding-left: 70px;
+    }
+    
+}
+@media (max-width: 660px) {
+    #name{
+        font-size: 111px;
+    }
+}
+@media (max-width: 598px) {
+    #name{
+        font-size: 96px;
+    }
+}
+@media (max-width: 502px) {
+    #name{
+        font-size: 78px;
+    }
+}
+@media (max-width: 450px) {
+    #content {
+
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 40px;
+    }
+    #name{
+        margin-top: 0px;
+    }
+    #info ul{
+        margin-top: 0px;
+    }
+}
+@media (max-width: 409px) {
+    #name {
+        font-size: 71px;
+    }
+    #description {
+        width: 91%;
+    }
+}
+@media (max-width: 404px) {
+    header ul li a {
+        font-size: 15px;
+    }
+    #buscador {
+        height: 28px;
+    }
+    #name {
+        font-size: 70px;
+    }
+}
+@media (max-width: 404px) {
+    #content{
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+    #description {
+        width: 97%;
+    }
+}
+@media (max-width: 379px) {
+    #info ul li a {
+     font-size: 15px;
+}
+}
+@media (max-width: 379px) {
+    #info ul li a {
+     font-size: 14px;}
+}
+
+@media (max-width: 353px) {
+    #content{
+        margin-top: 24px;
+    }
+    header ul li a {
+        font-size: 14px;
+    }
+    #name {
+        font-size: 65px;
+    }
+    #info ul li a {
+        font-size: 14px;
+    }
 }
