@@ -446,7 +446,7 @@ input[type = "button"]:first-child{
      font-size: 14px;}
 }
 
-@media (max-width: 353px) {
+@media (max-width: 359px) {
     #content{
         margin-top: 24px;
     }
