@@ -33,6 +33,7 @@
 
 #wrap {
     width: 95%;
+    max-width: 1300px;
     height: 65vh;
     min-height: 500px;
     background-color: #141724;
@@ -436,7 +437,7 @@ input[type = "button"]:first-child{
         width: 97%;
     }
 }
-@media (max-width: 379px) {
+@media (max-width: 381px) {
     #info ul li a {
      font-size: 15px;
 }
@@ -458,5 +459,28 @@ input[type = "button"]:first-child{
     }
     #info ul li a {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 342px) {
+
+    header ul li a {
+        font-size: 12px;
+    }
+    #info ul li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 326px) {
+
+    #name {
+        font-size: 60px;
+    }
+}
+@media (max-width: 314px) {
+
+    #info ul li a {
+        font-size: 10px;
     }
 }
